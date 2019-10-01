@@ -28,7 +28,6 @@ namespace Game
         {
             string[] possibleWords = { "aardvark", "pangolin", "quiz", "chinchilla", "armadillo", "walrus" };
             string word = "";
-
             if (i < 0)
             {
                 Random random = new Random();
@@ -47,7 +46,7 @@ namespace Game
             string output = "";
             Regex regex = new Regex(@"[^a-zA-Z]");
             Match match = regex.Match(letter);
-            if (match.Success || letter.Length > 1){
+            if (match.Success || letter.Length > 1 || letter.Length < 1){
                output = "Please try again.";
             }
             else
