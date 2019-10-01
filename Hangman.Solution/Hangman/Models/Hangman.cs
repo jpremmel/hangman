@@ -52,11 +52,16 @@ namespace Game
             }
             else
             {
-                char charLetter = letter.ToCharArray()[0];
+                char charLetter = letter.ToLower().ToCharArray()[0];
                 if (ChosenWord.Contains(charLetter))
                 {
-                    int i = ChosenWord.IndexOf(charLetter);
-                    ActiveGuesses[i] = charLetter;
+                    for(int j = 0; j < ActiveGuesses.Length; j++)
+                    {
+                        if (ChosenWord[j] == charLetter)
+                        {
+                            ActiveGuesses[j] = charLetter;
+                        }
+                    }
                     output = string.Join(" ", ActiveGuesses);
                     if (!output.Contains('_'))
                     {

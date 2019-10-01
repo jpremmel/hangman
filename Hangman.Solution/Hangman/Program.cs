@@ -18,6 +18,6 @@ class Program
         string input = Console.ReadLine();
         Console.WriteLine(hangman.TryALetter(input));
         }  
-        Console.WriteLine("You guessed it! The word is " + hangman.ChosenWord);
+        Console.WriteLine("You guessed it! The word is " + hangman.ChosenWord + "!");
     }
 }
