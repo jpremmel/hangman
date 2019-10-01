@@ -8,10 +8,12 @@ namespace Game
     {
         public string ChosenWord { get; set; }
         public char[] ActiveGuesses { get; set; }
+        public bool isComplete { get; set; }
 
         //constructor
         public Hangman(int i)
         {
+            isComplete = false;
             ChosenWord = PickWord(i);
             string underscores = "";
             for (int j = 0; j < ChosenWord.Length; j++)
@@ -56,6 +58,10 @@ namespace Game
                     int i = ChosenWord.IndexOf(charLetter);
                     ActiveGuesses[i] = charLetter;
                     output = string.Join(" ", ActiveGuesses);
+                    if (!output.Contains('_'))
+                    {
+                        isComplete = true;
+                    }
                 }
                 else
                 {
