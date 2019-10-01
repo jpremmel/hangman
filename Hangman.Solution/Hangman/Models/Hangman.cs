@@ -26,7 +26,7 @@ namespace Game
         //methods
         public string PickWord(int i)
         {
-            string[] possibleWords = { "aardvark", "pangolin", "quiz", "chinchilla", "armadillo", "walrus" };
+            string[] possibleWords = { "penguin", "aardvark", "pangolin", "quiz", "chinchilla", "armadillo", "walrus", "beluga", "dolphin", "narwhal", "octopus", "leopard", "cthulhu", "kraken", "mermaid", "unicorn", "seahorse", "pegasus", "baboon", "snake", "fox", "lion", "monkey", "hedgehog", "butterfly", "eagle", "awkward", "bagpipes", "banjo", "pumpkin", "autumn", "candy", "dwarf", "fervid", "sphinx", "jinx", "waxy", "yacht", "zealous", "zombie", "swivel", "pixel", "kayak", "boat", "gazebo", "eyelash", "ghost" };
             string word = "";
             if (i < 0)
             {
@@ -40,7 +40,6 @@ namespace Game
             }    
             return word;
         }
-
         public string TryALetter(string letter)
         {
             string output = "";

@@ -9,7 +9,6 @@ class Program
     {
         Gameplay();
     }
-
     public static void Gameplay()
     {
         Console.WriteLine("Welcome to Hangman!");
