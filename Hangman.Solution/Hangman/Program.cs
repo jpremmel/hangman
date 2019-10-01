@@ -8,15 +8,11 @@ class Program
     static void Main()
     {
         Console.WriteLine("Welcome to Hangman!");
-        Hangman hangman = new Hangman(-1);
-        string underscores = "";
-        for (int j = 0; j < hangman.ChosenWord.Length; j++)
-        {
-            underscores += "_ ";
-        }
+        Hangman hangman = new Hangman(0);
+        string underscores = string.Join(" ", hangman.ActiveGuesses);
         Console.WriteLine(underscores);
         Console.WriteLine("Guess a letter:");
         string input = Console.ReadLine();
-
+        Console.WriteLine(hangman.TryALetter(input));
     }
 }

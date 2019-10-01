@@ -7,11 +7,21 @@ namespace Game
     public class Hangman
     {
         public string ChosenWord { get; set; }
+        public char[] ActiveGuesses { get; set; }
+
+        //constructor
         public Hangman(int i)
         {
             ChosenWord = PickWord(i);
+            string underscores = "";
+            for (int j = 0; j < ChosenWord.Length; j++)
+            {
+                underscores += "_";
+            }
+            ActiveGuesses = underscores.ToCharArray();
         }
      
+        //methods
         public string PickWord(int i)
         {
             string[] possibleWords = { "aardvark", "pangolin", "quiz", "chinchilla", "armadillo", "walrus" };
@@ -40,7 +50,17 @@ namespace Game
             }
             else
             {
-
+                char charLetter = letter.ToCharArray()[0];
+                if (ChosenWord.Contains(charLetter))
+                {
+                    int i = ChosenWord.IndexOf(charLetter);
+                    ActiveGuesses[i] = charLetter;
+                    output = string.Join(" ", ActiveGuesses);
+                }
+                else
+                {
+                    output = "This letter isn't in the word. Try again!";
+                }
             }
             return output;
         }
