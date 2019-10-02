@@ -26,7 +26,7 @@ namespace Game
         //methods
         public string PickWord(int i)
         {
-            string[] possibleWords = { "aardvark", "penguin", "pangolin", "quiz", "chinchilla", "armadillo", "walrus", "beluga", "dolphin", "narwhal", "octopus", "leopard", "cthulhu", "kraken", "mermaid", "unicorn", "seahorse", "pegasus", "baboon", "snake", "fox", "lion", "monkey", "hedgehog", "butterfly", "eagle", "awkward", "bagpipes", "banjo", "pumpkin", "autumn", "candy", "dwarf", "fervid", "sphinx", "jinx", "waxy", "yacht", "zealous", "zombie", "swivel", "pixel", "kayak", "boat", "gazebo", "eyelash", "ghost" };
+            string[] possibleWords = { "aardvark", "penguin", "pangolin", "quiz", "chinchilla", "armadillo", "walrus", "beluga", "dolphin", "narwhal", "octopus", "leopard", "cthulhu", "kraken", "mermaid", "unicorn", "seahorse", "pegasus", "baboon", "snake", "fox", "lion", "monkey", "hedgehog", "butterfly", "eagle", "awkward", "bagpipes", "banjo", "pumpkin", "autumn", "candy", "dwarf", "fervid", "sphinx", "jinx", "waxy", "yacht", "zealous", "zombie", "swivel", "pixel", "kayak", "boat", "gazebo", "eyelash", "ghost", "asparagus", "beet", "carrot", "dill", "eggplant", "fennel", "garlic", "horseradish", "iceberg", "jicama", "kale", "leek", "mint", "nutmeg", "onion", "potato", "quinoa", "radish", "squash", "turnip", "vanilla", "watercress", "yam", "zucchini", "onomatopoeia", "frivolous", "syzygy", "celestial", "gravity", "etymology", "follicle", "zebra", "coffee", "ferret", "notebook", "dinosaur", "moist", "moisture", "moose", "keyboard", "geese", "goose", "cupcake", "mouse", "bicycle", "blouse", "mousse", "dirt", "kite", "quit", "squint", "splint", "splash" };
             string word = "";
             if (i < 0)
             {
